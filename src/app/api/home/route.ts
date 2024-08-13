@@ -4,6 +4,11 @@ export async function GET(request: Request) {
         return Response.json({ message: 'Success' }, { status: 200 });
     } else {
         throw new Error("Internal Server Error");
-        return Response.json({ message: 'Internal Server Error' }, { status: 500 });
+        // return Response.json({ message: 'Internal Server Error' }, { status: 500 });
+        // return new Response(JSON.stringify({ message:  'Internal Server Error' }), {
+        //     status: 500,
+        //     statusText: 'Internal Server Error',
+        //     headers: { 'Content-Type': 'application/json' },
+        // });
     }
 }
